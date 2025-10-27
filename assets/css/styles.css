@@ -1,0 +1,56 @@
+/* Styles for Eugenio Damaso Website - WOW visual + SEO friendly */
+:root{--bg:#0c0f14;--fg:#e6e9ef;--muted:#aab0bb;--brand:#6cf;--accent:#9f6cff;--card:#121722;--line:#243042;}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;}
+a{color:var(--brand);text-decoration:none}a:hover{opacity:.9}
+.container{width:min(1200px,94%);margin:0 auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(12,15,20,.85);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:900;font-size:22px;letter-spacing:.5px}.logo span{color:var(--accent)}
+.main-nav a{margin:0 12px;color:var(--fg)}.main-nav .btn{background:linear-gradient(135deg,var(--brand),var(--accent));padding:8px 14px;border-radius:10px;color:#000;font-weight:700}
+.hero-section{position:relative;overflow:hidden;padding:110px 0 80px;background:radial-gradient(1200px 500px at 20% -10%,rgba(111,204,255,.25),transparent),radial-gradient(1000px 400px at 80% -20%,rgba(159,108,255,.25),transparent)}
+.hero-title{font-size:46px;line-height:1.1;margin:0 0 10px}.highlight-text{background:linear-gradient(135deg,#fff,var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-subtitle{color:var(--muted);font-size:18px;margin:6px 0 18px}
+.credibility-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.credential-item{display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);padding:10px 12px;border-radius:12px;color:var(--muted)}
+.hero-cta .btn{margin-right:12px}
+.hero-content{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.floating-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+.ai-visualization{height:300px;position:relative}
+.neural-network{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.neural-network .node{width:14px;height:14px;border-radius:50%;background:#345;box-shadow:0 0 0 4px rgba(108,255,255,.08)}
+.neural-network .node.active{background:linear-gradient(135deg,var(--brand),var(--accent));box-shadow:0 0 18px rgba(108,255,255,.5)}
+.scroll-indicator{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center}
+.scroll-arrow{width:20px;height:30px;border:2px solid var(--muted);border-radius:14px;position:relative}
+.scroll-arrow:after{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:4px;height:6px;background:var(--muted);border-radius:2px;animation:scroll 1.6s infinite}
+@keyframes scroll{0%{opacity:0;transform:translate(-50%,0)}50%{opacity:1}100%{opacity:0;transform:translate(-50%,10px)}}
+.section-header{text-align:center;margin:40px 0 20px}
+.section-title{font-size:30px;margin:0 0 6px}
+.section-subtitle{color:var(--muted)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:transform .2s, box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.service-icon{font-size:26px;margin-bottom:8px;color:var(--brand)}
+.feature-tag{display:inline-block;padding:4px 8px;border-radius:20px;background:rgba(108,255,255,.1);color:var(--brand);border:1px solid rgba(108,255,255,.35);margin-right:6px;margin-top:6px}
+.competency-visual .skill-item{margin:10px 0}
+.skill-name{font-weight:600;margin-bottom:4px}
+.skill-bar{height:10px;background:#0b1320;border-radius:10px;border:1px solid var(--line)}
+.skill-progress{height:100%;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:10px}
+.certifications-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.cert-badge{display:inline-block;background:#0b1320;border:1px solid var(--line);padding:6px 10px;border-radius:10px;margin:6px;color:var(--muted)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.blog-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.blog-image img{width:100%;height:160px;object-fit:cover}
+.blog-category{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.6);padding:4px 8px;border-radius:8px;color:#fff;font-size:12px}
+.blog-content{padding:14px}
+.no-posts{color:var(--muted);text-align:center}
+.contact-cta{background:linear-gradient(180deg,rgba(111,204,255,.06),rgba(159,108,255,.06));border-top:1px solid var(--line);margin-top:40px;padding:40px 0}
+.cta-content{text-align:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:#121722;color:var(--fg);font-weight:700}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#000;border:none}
+.btn-secondary{background:#1b2433}
+.btn-outline-primary{border:1px solid var(--brand)}
+.btn-small{padding:8px 12px;font-weight:700}
+.site-footer{border-top:1px solid var(--line);margin-top:40px;background:#0b1320}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:26px 0}
+@media (max-width:980px){.hero-content{grid-template-columns:1fr}.services-grid,.blog-grid,.certifications-grid{grid-template-columns:1fr 1fr}.credibility-bar{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.services-grid,.blog-grid,.certifications-grid{grid-template-columns:1fr}.hero-title{font-size:36px}}

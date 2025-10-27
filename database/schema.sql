@@ -1,0 +1,32 @@
+-- SQL schema for blog and booking
+CREATE TABLE IF NOT EXISTS posts (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(240) NOT NULL,
+  slug VARCHAR(240) NOT NULL UNIQUE,
+  category VARCHAR(80) DEFAULT 'General',
+  image VARCHAR(500) DEFAULT NULL,
+  excerpt TEXT,
+  content MEDIUMTEXT NOT NULL,
+  status ENUM('draft','published') DEFAULT 'draft',
+  created_at DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS bookings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  type VARCHAR(200) NOT NULL,
+  notes TEXT,
+  email VARCHAR(200) NOT NULL,
+  slot1 VARCHAR(120),
+  slot2 VARCHAR(120),
+  slot3 VARCHAR(120),
+  created_at DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS activity_log (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  action VARCHAR(120) NOT NULL,
+  details TEXT,
+  ip_address VARCHAR(64),
+  user_agent VARCHAR(300),
+  created_at DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
